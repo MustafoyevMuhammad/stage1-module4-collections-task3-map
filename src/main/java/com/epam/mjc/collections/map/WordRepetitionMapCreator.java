@@ -7,6 +7,8 @@ public class WordRepetitionMapCreator {
     public Map<String, Integer> createWordRepetitionMap(String sentence) {
         sentence = sentence.toLowerCase();
         Map<String, Integer> map = new HashMap<>();
+        if(sentence.length() < 1)
+            return map;
         for (int i = 0; i < sentence.length(); i++) {
             if (sentence.charAt(i) >= 97 && sentence.charAt(i) <= 122 || sentence.charAt(i) == 32){}
             else sentence = sentence.replace(sentence.charAt(i)+"","");

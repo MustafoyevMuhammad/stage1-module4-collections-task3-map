@@ -9,7 +9,7 @@ public class WordRepetitionMapCreator {
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < sentence.length(); i++) {
             if (sentence.charAt(i) >= 97 && sentence.charAt(i) <= 122 || sentence.charAt(i) == 32){}
-            else sentence.replace(sentence.charAt(i)+"","");
+            else sentence = sentence.replace(sentence.charAt(i)+"","");
         }
         for (String str : sentence.split(" ")) {
             if(map.containsKey(str))
